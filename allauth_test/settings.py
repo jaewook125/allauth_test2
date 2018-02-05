@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.kakao',
+    'allauth.socialaccount.providers.naver',
     'home',
 ]
 
