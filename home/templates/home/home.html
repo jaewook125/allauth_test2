@@ -1,8 +1,15 @@
 {% load socialaccount %}
+{% providers_media_js %}
 
 <h1>Django Allauth Tutorial</h1>
 {% if user.is_authenticated %}
 <p>Welcome {{ user.username }} !!!</p>
+
 {% else %}
 <a href="{% provider_login_url 'github' %}">Sign Up</a>
+
+<a href="{% provider_login_url "facebook" method="js_sdk" %}" class="btn btn-block btn-social btn-facebook" style="background-color:#3b5998;text-align:center"> 
+  <span class = "fa fa-facebook"> </span> 
+               페이스 북으로 로그인 
+</a>
 {% endif %}
