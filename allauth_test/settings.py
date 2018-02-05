@@ -41,6 +41,7 @@ LOGIN_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_REQUIRED = True #페북
 ACCOUNT_USERNAME_REQURIED = True #페북
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #SMTP 전자 이메일 서버 설정
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.kakao',
     'allauth.socialaccount.providers.naver',
+    'allauth.socialaccount.providers.google',
     'home',
 ]
 
